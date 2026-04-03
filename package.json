@@ -2,7 +2,7 @@
   "name": "toxic-senpai",
   "displayName": "Toxic Senpai - Your Gangster Code Boss",
   "description": "A toxic gangster senpai boss who watches you code and reacts with anime sounds, sarcastic messages, and escalating rage when you break coding rules.",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "publisher": "NorwayIsHere",
   "license": "MIT",
   "repository": {
@@ -37,7 +37,7 @@
     "theme": "dark"
   },
   "icon": "media/icon.png",
-  "activationEvents": [],
+  "activationEvents": ["*"],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [

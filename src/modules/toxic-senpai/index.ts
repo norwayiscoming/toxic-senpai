@@ -1,7 +1,7 @@
 import * as vscode from "vscode";
 import type { ExtensionModule } from "../../types";
 import { log } from "../../utils";
-import { addAnger, getBossState, resetAnger } from "./lib/anger";
+import { addAnger, getBossState } from "./lib/anger";
 import { getMessage } from "./lib/messages";
 import { notify, setExtensionPath } from "./lib/notify";
 import { detectFromBashCommand, detectFromDiagnostics, detectFromFileEdit, detectNoCommitTooLong } from "./lib/detect";
@@ -81,15 +81,7 @@ export const toxicSenpaiModule: ExtensionModule = {
       }
     }, 60000); // Check every minute
 
-    // Override resetAnger command
-    context.subscriptions.push(
-      vscode.commands.registerCommand("toxicSenpai.resetAnger", () => {
-        resetAnger();
-        const state = getBossState();
-        updateStatusBar(state, "Senpai has calmed down. For now.");
-        vscode.window.showInformationMessage("$(smiley) Senpai has calmed down. For now.");
-      })
-    );
+    // Note: resetAnger command is registered in commands module
 
     log("All watchers registered");
   },
