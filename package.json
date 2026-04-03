@@ -2,7 +2,7 @@
   "name": "toxic-senpai",
   "displayName": "Toxic Senpai - Your Gangster Code Boss",
   "description": "A toxic gangster senpai boss who watches you code and reacts with anime sounds, sarcastic messages, and escalating rage when you break coding rules.",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "publisher": "NorwayIsHere",
   "license": "MIT",
   "repository": {
@@ -37,7 +37,9 @@
     "theme": "dark"
   },
   "icon": "media/icon.png",
-  "activationEvents": ["*"],
+  "activationEvents": [
+    "*"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
@@ -91,13 +93,22 @@
         "toxicSenpai.logLevel": {
           "type": "string",
           "default": "info",
-          "enum": ["debug", "info", "warn", "error"],
+          "enum": [
+            "debug",
+            "info",
+            "warn",
+            "error"
+          ],
           "description": "Set the logging level"
         },
         "toxicSenpai.language": {
           "type": "string",
           "default": "auto",
-          "enum": ["auto", "en", "vi"],
+          "enum": [
+            "auto",
+            "en",
+            "vi"
+          ],
           "description": "Language for senpai messages (auto detects from system locale)"
         },
         "toxicSenpai.soundEnabled": {

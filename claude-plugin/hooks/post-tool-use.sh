@@ -13,26 +13,36 @@ source "${LIB_DIR}/detect.sh"
 source "${LIB_DIR}/message.sh"
 source "${LIB_DIR}/notify.sh"
 
-# Read tool input from stdin (JSON)
-TOOL_INPUT=$(cat)
+# Read hook input from stdin (Claude Code JSON format)
+HOOK_INPUT=$(cat)
 
 # Initialize state if needed
 init_state "$STATE_FILE"
 
-# Detect triggers based on input content
-# We don't rely on CLAUDE_TOOL_NAME — instead parse the JSON input
 TRIGGER=""
 POINTS=0
 
-# Try to extract command (Bash tool)
-COMMAND=$(echo "$TOOL_INPUT" | python3 -c "import sys,json; print(json.load(sys.stdin).get('command',''))" 2>/dev/null || echo "")
+# Parse tool_input.command (Bash tool)
+COMMAND=$(echo "$HOOK_INPUT" | python3 -c "
+import sys,json
+d=json.load(sys.stdin)
+ti=d.get('tool_input',d)
+print(ti.get('command',''))
+" 2>/dev/null || echo "")
+
 if [ -n "$COMMAND" ]; then
   detect_bash_trigger "$COMMAND"
 fi
 
-# Try to extract file_path (Write/Edit tool)
+# Parse tool_input.file_path (Write/Edit tool)
 if [ -z "$TRIGGER" ]; then
-  FILE_PATH=$(echo "$TOOL_INPUT" | python3 -c "import sys,json; print(json.load(sys.stdin).get('file_path',''))" 2>/dev/null || echo "")
+  FILE_PATH=$(echo "$HOOK_INPUT" | python3 -c "
+import sys,json
+d=json.load(sys.stdin)
+ti=d.get('tool_input',d)
+print(ti.get('file_path',''))
+" 2>/dev/null || echo "")
+
   if [ -n "$FILE_PATH" ] && [ -f "$FILE_PATH" ]; then
     LINE_COUNT=$(wc -l < "$FILE_PATH" | tr -d ' ')
     detect_file_trigger "$FILE_PATH" "$LINE_COUNT"
