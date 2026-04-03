@@ -13,30 +13,31 @@ source "${LIB_DIR}/detect.sh"
 source "${LIB_DIR}/message.sh"
 source "${LIB_DIR}/notify.sh"
 
-# Read tool input from stdin
+# Read tool input from stdin (JSON)
 TOOL_INPUT=$(cat)
-TOOL_NAME="${CLAUDE_TOOL_NAME:-}"
 
 # Initialize state if needed
 init_state "$STATE_FILE"
 
-# Detect triggers based on tool
+# Detect triggers based on input content
+# We don't rely on CLAUDE_TOOL_NAME — instead parse the JSON input
 TRIGGER=""
 POINTS=0
 
-case "$TOOL_NAME" in
-  Bash)
-    COMMAND=$(echo "$TOOL_INPUT" | python3 -c "import sys,json; print(json.load(sys.stdin).get('command',''))" 2>/dev/null || echo "")
-    detect_bash_trigger "$COMMAND"
-    ;;
-  Write|Edit)
-    FILE_PATH=$(echo "$TOOL_INPUT" | python3 -c "import sys,json; print(json.load(sys.stdin).get('file_path',''))" 2>/dev/null || echo "")
-    if [ -n "$FILE_PATH" ] && [ -f "$FILE_PATH" ]; then
-      LINE_COUNT=$(wc -l < "$FILE_PATH" | tr -d ' ')
-      detect_file_trigger "$FILE_PATH" "$LINE_COUNT"
-    fi
-    ;;
-esac
+# Try to extract command (Bash tool)
+COMMAND=$(echo "$TOOL_INPUT" | python3 -c "import sys,json; print(json.load(sys.stdin).get('command',''))" 2>/dev/null || echo "")
+if [ -n "$COMMAND" ]; then
+  detect_bash_trigger "$COMMAND"
+fi
+
+# Try to extract file_path (Write/Edit tool)
+if [ -z "$TRIGGER" ]; then
+  FILE_PATH=$(echo "$TOOL_INPUT" | python3 -c "import sys,json; print(json.load(sys.stdin).get('file_path',''))" 2>/dev/null || echo "")
+  if [ -n "$FILE_PATH" ] && [ -f "$FILE_PATH" ]; then
+    LINE_COUNT=$(wc -l < "$FILE_PATH" | tr -d ' ')
+    detect_file_trigger "$FILE_PATH" "$LINE_COUNT"
+  fi
+fi
 
 # If trigger detected, react
 if [ -n "$TRIGGER" ]; then
