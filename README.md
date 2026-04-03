@@ -15,12 +15,9 @@ Your senpai has **4 moods** depending on how badly you code:
 | **Angry** | 4-6 | Glasses off, fists up | "NANI?! Senpai is NOT calm!" |
 | **Insane** | 7+ | Fire eyes, desk smash | "@#$%! EVERYTHING BURNS." |
 
-<p align="center">
-  <img src="assets/boss-chill.svg" width="120" alt="Chill">
-  <img src="assets/boss-annoyed.svg" width="120" alt="Annoyed">
-  <img src="assets/boss-angry.svg" width="120" alt="Angry">
-  <img src="assets/boss-insane.svg" width="120" alt="Insane">
-</p>
+*Chill* | *Annoyed* | *Angry* | *Insane*
+
+> Boss states are pixel-art SVGs — check the `assets/` folder to see them.
 
 ## What triggers Senpai?
 
