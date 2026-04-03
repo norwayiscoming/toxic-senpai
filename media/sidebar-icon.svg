@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <!-- Toxic Senpai sidebar icon - gangster boss face simplified -->
+  <!-- Sunglasses + gold tooth smirk -->
+  <rect width="24" height="24" fill="none"/>
+  <!-- Head -->
+  <circle cx="12" cy="11" r="8" fill="#d4a574"/>
+  <!-- Hair -->
+  <path d="M4 9 Q5 3 12 2 Q19 3 20 9 L18 7 Q17 4 12 3 Q7 4 6 7 Z" fill="#1a1a1a"/>
+  <!-- Sunglasses -->
+  <rect x="5" y="8.5" width="5.5" height="3" rx="0.5" fill="#1a1a1a"/>
+  <rect x="13.5" y="8.5" width="5.5" height="3" rx="0.5" fill="#1a1a1a"/>
+  <rect x="10.5" y="9.5" width="3" height="1" fill="#1a1a1a"/>
+  <!-- Smirk -->
+  <path d="M8 14.5 Q10 15 12 14.5 Q14 14 16 14.5" stroke="#1a1a1a" stroke-width="1" fill="none" stroke-linecap="round"/>
+  <!-- Gold tooth glint -->
+  <rect x="12.5" y="14" width="1.5" height="1" rx="0.3" fill="#ffd700"/>
+  <!-- Gold chain hint -->
+  <circle cx="12" cy="20" r="1.5" fill="#ffd700" opacity="0.8"/>
+  <path d="M8 18 Q10 20 12 20 Q14 20 16 18" stroke="#ffd700" stroke-width="0.8" fill="none" opacity="0.6"/>
+</svg>

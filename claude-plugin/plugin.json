@@ -1,0 +1,33 @@
+{
+  "name": "toxic-senpai",
+  "displayName": "Toxic Senpai",
+  "description": "A toxic gangster senpai boss who watches your Claude Code session and reacts to bad habits.",
+  "version": "0.1.0",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": {
+          "tool_name": "Bash"
+        },
+        "command": "bash ${PLUGIN_DIR}/hooks/post-tool-use.sh"
+      },
+      {
+        "matcher": {
+          "tool_name": "Write"
+        },
+        "command": "bash ${PLUGIN_DIR}/hooks/post-tool-use.sh"
+      },
+      {
+        "matcher": {
+          "tool_name": "Edit"
+        },
+        "command": "bash ${PLUGIN_DIR}/hooks/post-tool-use.sh"
+      }
+    ],
+    "Notification": [
+      {
+        "command": "bash ${PLUGIN_DIR}/hooks/notification.sh"
+      }
+    ]
+  }
+}

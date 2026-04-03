@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Pixel Art - GANGSTER BOSS: ANNOYED STATE -->
+  <!-- Lỗi nhỏ, warning, file hơi dài -->
+  <rect width="128" height="128" fill="#2e2a1a" rx="4"/>
+
+  <!-- Head -->
+  <rect x="36" y="20" width="56" height="48" fill="#d4a574"/>
+  <rect x="32" y="24" width="4" height="40" fill="#d4a574"/>
+  <rect x="92" y="24" width="4" height="40" fill="#d4a574"/>
+
+  <!-- Slicked back hair -->
+  <rect x="32" y="12" width="64" height="12" fill="#111"/>
+  <rect x="28" y="16" width="8" height="24" fill="#111"/>
+  <rect x="92" y="16" width="8" height="24" fill="#111"/>
+  <rect x="96" y="20" width="4" height="16" fill="#111"/>
+  <rect x="24" y="20" width="4" height="16" fill="#111"/>
+
+  <!-- Scar -->
+  <rect x="40" y="48" width="2" height="12" fill="#b5714a"/>
+  <rect x="42" y="46" width="2" height="4" fill="#b5714a"/>
+  <rect x="38" y="56" width="2" height="4" fill="#b5714a"/>
+
+  <!-- Sunglasses (pulled down slightly, eyes peeking) -->
+  <rect x="36" y="40" width="24" height="10" fill="#111" rx="1"/>
+  <rect x="68" y="40" width="24" height="10" fill="#111" rx="1"/>
+  <rect x="60" y="42" width="8" height="4" fill="#111"/>
+  <!-- Eyes peeking ABOVE glasses (suspicious look) -->
+  <rect x="42" y="34" width="10" height="5" fill="white"/>
+  <rect x="76" y="34" width="10" height="5" fill="white"/>
+  <rect x="46" y="35" width="4" height="3" fill="#1a1a1a"/>
+  <rect x="80" y="35" width="4" height="3" fill="#1a1a1a"/>
+
+  <!-- Slightly annoyed eyebrows (one raised) -->
+  <rect x="40" y="30" width="16" height="3" fill="#111"/>
+  <rect x="72" y="28" width="16" height="3" fill="#111" transform="rotate(5 80 29)"/>
+
+  <!-- Stubble -->
+  <rect x="40" y="52" width="4" height="2" fill="#8b6948" opacity="0.4"/>
+  <rect x="76" y="54" width="4" height="2" fill="#8b6948" opacity="0.4"/>
+  <rect x="84" y="52" width="4" height="2" fill="#8b6948" opacity="0.4"/>
+
+  <!-- Mouth (side frown, unimpressed) -->
+  <rect x="48" y="58" width="32" height="4" fill="#1a1a1a"/>
+  <rect x="60" y="58" width="6" height="2" fill="#ffd700"/>
+  <!-- Frown down on left -->
+  <rect x="44" y="60" width="4" height="4" fill="#1a1a1a"/>
+
+  <!-- Toothpick instead of cigarette (less relaxed) -->
+  <rect x="80" y="59" width="14" height="2" fill="#c8a96e"/>
+
+  <!-- Neck -->
+  <rect x="48" y="68" width="32" height="8" fill="#d4a574"/>
+
+  <!-- Tattoo -->
+  <rect x="84" y="68" width="2" height="2" fill="#2d5a1e" opacity="0.7"/>
+  <rect x="86" y="70" width="2" height="2" fill="#2d5a1e" opacity="0.7"/>
+  <rect x="82" y="70" width="2" height="2" fill="#2d5a1e" opacity="0.7"/>
+
+  <!-- Gold chain -->
+  <rect x="40" y="72" width="4" height="4" fill="#ffd700"/>
+  <rect x="44" y="74" width="4" height="4" fill="#ffd700"/>
+  <rect x="48" y="76" width="4" height="4" fill="#ffd700"/>
+  <rect x="52" y="78" width="4" height="4" fill="#ffd700"/>
+  <rect x="56" y="80" width="4" height="4" fill="#ffd700"/>
+  <rect x="60" y="82" width="8" height="8" fill="#ffd700"/>
+  <rect x="62" y="83" width="4" height="6" fill="#b8860b"/>
+  <rect x="72" y="78" width="4" height="4" fill="#ffd700"/>
+  <rect x="76" y="76" width="4" height="4" fill="#ffd700"/>
+  <rect x="80" y="74" width="4" height="4" fill="#ffd700"/>
+  <rect x="84" y="72" width="4" height="4" fill="#ffd700"/>
+
+  <!-- Body - leather jacket -->
+  <rect x="24" y="76" width="80" height="40" fill="#1a1a1a"/>
+  <polygon points="48,76 64,92 56,76" fill="#222"/>
+  <polygon points="80,76 64,92 72,76" fill="#222"/>
+  <rect x="52" y="76" width="24" height="16" fill="#8b0000"/>
+
+  <!-- Arms (crossed = annoyed) -->
+  <rect x="16" y="80" width="12" height="28" fill="#1a1a1a"/>
+  <rect x="100" y="80" width="12" height="28" fill="#1a1a1a"/>
+  <!-- Crossed arms overlay -->
+  <rect x="36" y="92" width="56" height="8" fill="#1a1a1a"/>
+  <rect x="32" y="92" width="8" height="8" fill="#d4a574"/>
+  <rect x="88" y="92" width="8" height="8" fill="#d4a574"/>
+
+  <!-- ? bubble -->
+  <rect x="96" y="8" width="20" height="16" rx="4" fill="#ffd700" opacity="0.8"/>
+  <text x="106" y="20" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#1a1a1a">?</text>
+
+  <!-- Label -->
+  <text x="64" y="124" text-anchor="middle" font-family="monospace" font-size="7" fill="#ffd700" font-weight="bold">2: ANNOYED</text>
+</svg>

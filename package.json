@@ -1,0 +1,195 @@
+{
+  "name": "toxic-senpai",
+  "displayName": "Toxic Senpai - Your Gangster Code Boss",
+  "description": "A toxic gangster senpai boss who watches you code and reacts with anime sounds, sarcastic messages, and escalating rage when you break coding rules.",
+  "version": "0.1.0",
+  "publisher": "NorwayIsHere",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/norwayiscoming/toxic-senpai"
+  },
+  "homepage": "https://github.com/norwayiscoming/toxic-senpai#readme",
+  "bugs": {
+    "url": "https://github.com/norwayiscoming/toxic-senpai/issues"
+  },
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Other",
+    "Entertainment"
+  ],
+  "keywords": [
+    "claude",
+    "claude-code",
+    "fun",
+    "anime",
+    "toxic",
+    "senpai",
+    "gangster",
+    "boss",
+    "code-review",
+    "entertainment"
+  ],
+  "galleryBanner": {
+    "color": "#1a1a2e",
+    "theme": "dark"
+  },
+  "icon": "media/icon.png",
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "toxicSenpai.showBoss",
+        "title": "Show Boss",
+        "category": "Toxic Senpai"
+      },
+      {
+        "command": "toxicSenpai.resetAnger",
+        "title": "Reset Anger (Apologize to Senpai)",
+        "category": "Toxic Senpai"
+      },
+      {
+        "command": "toxicSenpai.toggleSound",
+        "title": "Toggle Sound",
+        "category": "Toxic Senpai"
+      },
+      {
+        "command": "toxicSenpai.showPanel",
+        "title": "Show Boss Panel",
+        "category": "Toxic Senpai"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "toxicSenpaiSidebar",
+          "title": "Toxic Senpai",
+          "icon": "media/sidebar-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "toxicSenpaiSidebar": [
+        {
+          "id": "toxicSenpai.bossView",
+          "name": "The Boss",
+          "type": "webview"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Toxic Senpai",
+      "properties": {
+        "toxicSenpai.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or disable Toxic Senpai"
+        },
+        "toxicSenpai.logLevel": {
+          "type": "string",
+          "default": "info",
+          "enum": ["debug", "info", "warn", "error"],
+          "description": "Set the logging level"
+        },
+        "toxicSenpai.language": {
+          "type": "string",
+          "default": "auto",
+          "enum": ["auto", "en", "vi"],
+          "description": "Language for senpai messages (auto detects from system locale)"
+        },
+        "toxicSenpai.soundEnabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable anime sound effects"
+        },
+        "toxicSenpai.notificationEnabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable OS notifications"
+        },
+        "toxicSenpai.triggers.codeErrors": {
+          "type": "boolean",
+          "default": true,
+          "description": "React to code errors and warnings"
+        },
+        "toxicSenpai.triggers.forgotBuild": {
+          "type": "boolean",
+          "default": true,
+          "description": "React when committing without building first"
+        },
+        "toxicSenpai.triggers.forgotTest": {
+          "type": "boolean",
+          "default": true,
+          "description": "React when pushing without testing first"
+        },
+        "toxicSenpai.triggers.tooManyCommits": {
+          "type": "boolean",
+          "default": true,
+          "description": "React when pushing too many commits at once"
+        },
+        "toxicSenpai.triggers.pushMain": {
+          "type": "boolean",
+          "default": true,
+          "description": "React when pushing directly to main/master"
+        },
+        "toxicSenpai.triggers.fileTooLong": {
+          "type": "boolean",
+          "default": true,
+          "description": "React when a file exceeds the line threshold"
+        },
+        "toxicSenpai.triggers.noCommitTooLong": {
+          "type": "boolean",
+          "default": true,
+          "description": "React when no commit for too long"
+        },
+        "toxicSenpai.thresholds.fileMaxLines": {
+          "type": "number",
+          "default": 500,
+          "description": "Max lines before senpai complains about file length"
+        },
+        "toxicSenpai.thresholds.noCommitMinutes": {
+          "type": "number",
+          "default": 120,
+          "description": "Minutes without a commit before senpai gets worried"
+        },
+        "toxicSenpai.decayMinutes": {
+          "type": "number",
+          "default": 10,
+          "description": "Minutes of good behavior before anger decreases by 1"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "npm run check-types && npm run lint && node esbuild.js",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node esbuild.js --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "package": "npm run check-types && npm run lint && node esbuild.js --production",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "test": "vscode-test",
+    "pretest": "npm run compile"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@stylistic/eslint-plugin": "^2.9.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^22",
+    "@types/vscode": "^1.100.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "esbuild": "^0.25.0",
+    "eslint": "^9.13.0",
+    "mocha": "^10.2.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.0"
+  },
+  "dependencies": {}
+}

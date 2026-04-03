@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Pixel Art - GANGSTER BOSS: INSANE/PHÁT ĐIÊN STATE -->
+  <!-- Push main, quên test trước khi push -->
+  <rect width="128" height="128" fill="#2e0a0a" rx="4"/>
+
+  <!-- Screen shake effect - everything slightly tilted -->
+  <g transform="rotate(-2 64 64)">
+
+  <!-- FIRE background at bottom -->
+  <rect x="0" y="100" width="128" height="28" fill="#ff4400" opacity="0.3"/>
+  <rect x="8" y="104" width="12" height="20" fill="#ff6600" opacity="0.4"/>
+  <rect x="28" y="108" width="8" height="16" fill="#ff6600" opacity="0.3"/>
+  <rect x="48" y="104" width="12" height="20" fill="#ff6600" opacity="0.4"/>
+  <rect x="72" y="106" width="10" height="18" fill="#ff6600" opacity="0.3"/>
+  <rect x="92" y="104" width="12" height="20" fill="#ff6600" opacity="0.4"/>
+  <rect x="112" y="108" width="12" height="16" fill="#ff6600" opacity="0.3"/>
+
+  <!-- Head (RED from rage) -->
+  <rect x="36" y="18" width="56" height="48" fill="#c45a45"/>
+  <rect x="32" y="22" width="4" height="40" fill="#c45a45"/>
+  <rect x="92" y="22" width="4" height="40" fill="#c45a45"/>
+
+  <!-- Hair (totally messed up) -->
+  <rect x="32" y="10" width="64" height="12" fill="#111"/>
+  <rect x="28" y="14" width="8" height="24" fill="#111"/>
+  <rect x="92" y="14" width="8" height="24" fill="#111"/>
+  <!-- Hair standing up from rage -->
+  <rect x="40" y="4" width="4" height="10" fill="#111"/>
+  <rect x="52" y="2" width="4" height="12" fill="#111"/>
+  <rect x="64" y="4" width="4" height="10" fill="#111"/>
+  <rect x="76" y="2" width="4" height="12" fill="#111"/>
+  <rect x="84" y="4" width="4" height="10" fill="#111"/>
+
+  <!-- Scar (GLOWING from rage) -->
+  <rect x="40" y="46" width="2" height="12" fill="#ff6644"/>
+  <rect x="42" y="44" width="2" height="4" fill="#ff6644"/>
+  <rect x="38" y="54" width="2" height="4" fill="#ff6644"/>
+
+  <!-- Eyes - FIRE IN EYES -->
+  <rect x="36" y="34" width="20" height="14" fill="white"/>
+  <rect x="72" y="34" width="20" height="14" fill="white"/>
+  <!-- Irises on fire -->
+  <rect x="42" y="36" width="10" height="10" fill="#ff0000"/>
+  <rect x="78" y="36" width="10" height="10" fill="#ff0000"/>
+  <rect x="44" y="38" width="6" height="6" fill="#ff6600"/>
+  <rect x="80" y="38" width="6" height="6" fill="#ff6600"/>
+  <rect x="46" y="40" width="2" height="2" fill="#ffff00"/>
+  <rect x="82" y="40" width="2" height="2" fill="#ffff00"/>
+
+  <!-- MEGA angry eyebrows -->
+  <rect x="34" y="28" width="22" height="5" fill="#111" transform="rotate(-15 45 30)"/>
+  <rect x="72" y="28" width="22" height="5" fill="#111" transform="rotate(15 83 30)"/>
+
+  <!-- Mouth WIDE OPEN screaming -->
+  <rect x="40" y="52" width="48" height="16" fill="#1a1a1a"/>
+  <!-- Top teeth -->
+  <rect x="44" y="52" width="6" height="4" fill="#ddd"/>
+  <rect x="52" y="52" width="6" height="4" fill="#ddd"/>
+  <rect x="60" y="52" width="8" height="4" fill="#ffd700"/>
+  <rect x="70" y="52" width="6" height="4" fill="#ddd"/>
+  <rect x="78" y="52" width="6" height="4" fill="#ddd"/>
+  <!-- Bottom teeth -->
+  <rect x="48" y="64" width="4" height="4" fill="#ddd"/>
+  <rect x="56" y="64" width="4" height="4" fill="#ddd"/>
+  <rect x="64" y="64" width="4" height="4" fill="#ddd"/>
+  <rect x="72" y="64" width="4" height="4" fill="#ddd"/>
+  <!-- Tongue -->
+  <rect x="52" y="58" width="24" height="6" fill="#cc0000"/>
+
+  <!-- MULTIPLE anger veins -->
+  <path d="M82 10 L86 14 L82 18 L86 14 L90 10" stroke="#ff0000" stroke-width="3" fill="none"/>
+  <path d="M28 14 L32 18 L28 22 L32 18 L36 14" stroke="#ff0000" stroke-width="2.5" fill="none"/>
+  <path d="M92 26 L96 30 L92 34 L96 30 L100 26" stroke="#ff0000" stroke-width="2" fill="none"/>
+
+  <!-- Neck (also red) -->
+  <rect x="48" y="66" width="32" height="10" fill="#c45a45"/>
+
+  <!-- Tattoo -->
+  <rect x="84" y="68" width="2" height="2" fill="#2d5a1e" opacity="0.7"/>
+  <rect x="86" y="70" width="2" height="2" fill="#2d5a1e" opacity="0.7"/>
+  <rect x="82" y="70" width="2" height="2" fill="#2d5a1e" opacity="0.7"/>
+
+  <!-- Gold chain BROKEN (pieces flying) -->
+  <rect x="40" y="74" width="4" height="4" fill="#ffd700"/>
+  <rect x="48" y="78" width="4" height="4" fill="#ffd700"/>
+  <rect x="80" y="78" width="4" height="4" fill="#ffd700"/>
+  <rect x="88" y="74" width="4" height="4" fill="#ffd700"/>
+  <!-- Flying chain pieces -->
+  <rect x="20" y="86" width="4" height="4" fill="#ffd700" transform="rotate(30 22 88)"/>
+  <rect x="104" y="82" width="4" height="4" fill="#ffd700" transform="rotate(-20 106 84)"/>
+  <!-- Pendant flying -->
+  <rect x="56" y="92" width="8" height="8" fill="#ffd700" transform="rotate(25 60 96)"/>
+
+  <!-- Body - leather jacket (ripped open) -->
+  <rect x="24" y="76" width="80" height="40" fill="#1a1a1a"/>
+  <polygon points="44,76 64,96 52,76" fill="#222"/>
+  <polygon points="84,76 64,96 76,76" fill="#222"/>
+  <rect x="48" y="76" width="32" height="20" fill="#8b0000"/>
+
+  <!-- Arms SMASHING (raised high) -->
+  <rect x="4" y="56" width="14" height="36" fill="#1a1a1a"/>
+  <rect x="110" y="56" width="14" height="36" fill="#1a1a1a"/>
+  <!-- Fists -->
+  <rect x="2" y="50" width="14" height="12" fill="#c45a45" rx="2"/>
+  <rect x="112" y="50" width="14" height="12" fill="#c45a45" rx="2"/>
+
+  <!-- Table/desk being smashed -->
+  <rect x="0" y="108" width="128" height="4" fill="#5a3a1a"/>
+  <!-- Crack in desk -->
+  <path d="M60 108 L64 116 L68 108" stroke="#3a2010" stroke-width="2" fill="none"/>
+
+  <!-- Swear symbols -->
+  <text x="16" y="44" font-family="monospace" font-size="10" font-weight="bold" fill="#ff4444">@#</text>
+  <text x="100" y="44" font-family="monospace" font-size="10" font-weight="bold" fill="#ff4444">$%!</text>
+
+  <!-- Screen shake lines -->
+  <line x1="2" y1="4" x2="10" y2="4" stroke="#ff4444" stroke-width="2" opacity="0.5"/>
+  <line x1="118" y1="8" x2="126" y2="8" stroke="#ff4444" stroke-width="2" opacity="0.5"/>
+  <line x1="4" y1="120" x2="12" y2="120" stroke="#ff4444" stroke-width="2" opacity="0.4"/>
+
+  </g>
+
+  <!-- Label -->
+  <text x="64" y="124" text-anchor="middle" font-family="monospace" font-size="7" fill="#ff0000" font-weight="bold">4: INSANE</text>
+</svg>
